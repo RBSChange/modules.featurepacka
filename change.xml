@@ -16,7 +16,19 @@
 			</versions>
 		</dependency>
 		<dependency>
-			<name>change-lib/catalog</name>
+			<name>module/catalog</name>
+			<versions>
+				<version>3.0.4</version>
+			</versions>
+		</dependency>
+		<dependency>
+			<name>module/order</name>
+			<versions>
+				<version>3.0.4</version>
+			</versions>
+		</dependency>
+		<dependency>
+			<name>module/customer</name>
 			<versions>
 				<version>3.0.4</version>
 			</versions>
