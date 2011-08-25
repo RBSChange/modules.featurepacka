@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localization>
+	<entity id="module-name">
+		<locale lang="fr">pack de fonctionnalités A</locale>
+		<locale lang="en">feature pack A</locale>
+	</entity>
+	<entity id="system-folder-name">
+		<locale lang="fr">pack de fonctionnalités A</locale>
+		<locale lang="en">feature pack A</locale>
+	</entity>
+</localization>

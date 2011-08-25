@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/featurepacka/persistentdocument/import/featurepacka_binding.xml" />
+
+	<rootfolder module="order">
+		<waitingresponseorderfolder byLabel="modules.featurepacka.document.waitingresponseorderfolder.document-name" />
+	</rootfolder>
+</script>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<perspective>
+	<models>
+		<updatemodel name="modules_generic/rootfolder">
+			<addchild model="modules_featurepacka/productqueryfolder" />
+			<adddrop model="modules_featurepacka/productqueryfolder" action="move" />
+			<addcontextaction name="createProductqueryfolder" group="createRootfolder_" before="" />
+		</updatemodel>
+		<model name="modules_featurepacka/productqueryfolder">
+			<children>
+				<child model="modules_catalog/simpleproduct" from="function" />
+				<child model="modules_catalog/virtualproduct" from="function" />
+				<child model="modules_catalog/declinedproduct" from="function" />
+				<child model="modules_catalog/bundleproduct" from="function" />
+				<child model="modules_catalog/kit" from="function" />
+			</children>
+			<contextactions>
+				<contextaction name="edit" />
+				<contextaction name="delete" />
+				<contextaction name="openFolder" />
+			</contextactions>
+		</model>
+	</models>
+	<actions>
+		<action name="createProductqueryfolder" single="true" permission="Insert_productqueryfolder" icon="add" label="&amp;modules.featurepacka.bo.actions.Createproductqueryfolder;" />
+	</actions>
+</perspective>

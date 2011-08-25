@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localization>
+	<entity id="createproductqueryfolder">
+		<locale lang="fr">créer un dossier intelligent de produits</locale>
+		<locale lang="en">create a product smart folder</locale>
+	</entity>
+</localization>
