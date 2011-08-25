@@ -16,19 +16,19 @@
 			</versions>
 		</dependency>
 		<dependency>
-			<name>module/catalog</name>
+			<name>change-module/catalog</name>
 			<versions>
 				<version>3.0.4</version>
 			</versions>
 		</dependency>
 		<dependency>
-			<name>module/order</name>
+			<name>change-module/order</name>
 			<versions>
 				<version>3.0.4</version>
 			</versions>
 		</dependency>
 		<dependency>
-			<name>module/customer</name>
+			<name>change-module/customer</name>
 			<versions>
 				<version>3.0.4</version>
 			</versions>
