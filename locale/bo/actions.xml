@@ -4,4 +4,7 @@
 		<locale lang="fr">créer un dossier intelligent de produits</locale>
 		<locale lang="en">create a product smart folder</locale>
 	</entity>
+	<entity id="create-from-this">
+		<locale lang="fr">créer un autre prix à partir de celui-ci</locale>
+	</entity>
 </localization>

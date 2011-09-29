@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl" xmlns:xbl="http://www.mozilla.org/xbl" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<binding id="cPriceCreatePanel" extends="modules.catalog.editors.price#price_create">
+		<implementation>
+			<method name="getInitializeParameters">
+				<body><![CDATA[
+					if (this.documentEditor.hasAttribute('copyFromPriceId'))
+					{
+						var attributes = {
+							action: 'LoadJSON',
+							cmpref: this.documentEditor.getAttribute('copyFromPriceId'), 
+							lang : this.documentEditor.documentInfos.vo, 
+							documentproperties: this.mFieldNames.join(',')
+						};
+						this.documentEditor.removeAttribute('copyFromPriceId');
+					}
+					else
+					{
+						var attributes = {
+							action: "DefaultValuesJSON",
+							parentref: this.documentEditor.parentid, 
+							lang: Context.W_LANG, 
+							modelname: this.documentEditor.documentmodelname,
+							documentproperties : this.mFieldNames.join(',')
+						};
+						if ("prepareInitializeValues" in this)
+						{
+							this.prepareInitializeValues(attributes);
+						}
+					}
+					return attributes;
+				]]></body>
+			</method>
+			
+			<method name="preparePropertiesValues">
+				<parameter name="attributes" />
+				<body><![CDATA[
+					var fields = this.fields;
+					for (var name in fields)
+					{
+						var field = fields[name];
+						if (field.value != '' && !field.modified)
+						{
+							attributes[name] = field.value;
+						}
+					}
+				]]></body>
+			</method>
+		</implementation>
+	</binding>
+	
+	<binding id="cPricesList" extends="modules.catalog.cPriceEditor#cPricesList">
+		<implementation>
+			<method name="execute_createFrom">
+				<parameter name="rowNode" />
+				<parameter name="rowData" />
+				<body><![CDATA[
+					var parentId = this.getPricePanel().documentEditor.documentid;
+					var uri = ['catalog', 'createPriceFromPrice', 'modules_catalog_price', parentId, rowData.id].join(',');
+					openActionUri(uri);
+				]]></body>
+			</method>
+		</implementation>
+	</binding>
+
+	<binding id="cPricesListActionCell">
+		<content>
+			<xul:toolbar class="actions">
+				<xul:toolbarbutton action="edit" image="{IconsBase}/small/edit.png" tooltiptext="&amp;modules.uixul.bo.actions.Edit;" />
+				<xul:toolbarbutton action="delete" image="{IconsBase}/small/delete.png" tooltiptext="&amp;modules.uixul.bo.actions.Delete;" />
+				<xul:toolbarbutton action="addDiscount" xbl:inherits="hidden=hideAddDiscount" image="{IconsBase}/small/discount-add.png"
+					tooltiptext="&amp;modules.catalog.bo.actions.Add-discount;" />
+				<xul:toolbarbutton action="removeDiscount" xbl:inherits="hidden=hideRemoveDiscount" image="{IconsBase}/small/discount-remove.png"
+					tooltiptext="&amp;modules.catalog.bo.actions.Remove-discount;" />
+				<xul:toolbarbutton action="createFrom" image="{IconsBase}/small/duplicate.png" tooltiptext="&amp;modules.featurepacka.bo.actions.Create-from-this;" />
+			</xul:toolbar>
+		</content>
+	</binding>
+</bindings>

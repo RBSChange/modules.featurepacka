@@ -6,4 +6,12 @@
 			this.createDocumentEditor('modules_featurepacka_productqueryfolder', listWidget.getSelectedItems()[0].id);
 		]]></body>
 	</action>
+	<action name="createPriceFromPrice">
+		<parameter name="params" />
+		<body><![CDATA[
+			var editor = this.getDocumentEditor(params[2]);
+			editor.setAttribute('copyFromPriceId', params[4]);
+			this.createDocumentEditor(params[2], params[3]);
+		]]></body>
+	</action>
 </actions>

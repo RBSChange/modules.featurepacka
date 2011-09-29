@@ -1,0 +1,9 @@
+cdocumenteditor#edt_catalog_price ccreatepanel{
+	-moz-binding: url(binding:modules.featurepacka.cPriceEditor#cPriceCreatePanel);
+}
+cfield gridlist.pricelist{
+	-moz-binding: url(binding:modules.featurepacka.cPriceEditor#cPricesList);
+}
+cfield gridlist.pricelist cactioncell{
+	-moz-binding: url(binding:modules.featurepacka.cPriceEditor#cPricesListActionCell);
+}
