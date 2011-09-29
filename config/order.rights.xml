@@ -2,5 +2,11 @@
 <rights>
 	<actions>
 		<document name="waitingresponseorderfolder" />
+		<action name="PrintOrder" />
 	</actions>
+	<roles>
+		<role name="Admin">
+			<permission name="PrintOrder" />
+		</role>
+	</roles>
 </rights>

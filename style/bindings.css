@@ -1,3 +1,4 @@
+/** price duplication */
 cdocumenteditor#edt_catalog_price ccreatepanel{
 	-moz-binding: url(binding:modules.featurepacka.cPriceEditor#cPriceCreatePanel);
 }
@@ -6,4 +7,12 @@ cfield gridlist.pricelist{
 }
 cfield gridlist.pricelist cactioncell{
 	-moz-binding: url(binding:modules.featurepacka.cPriceEditor#cPricesListActionCell);
+}
+
+/** order printing */
+wmodule cdocumenteditor#edt_order_order cmessagespanel{
+	-moz-binding: url(binding:modules.featurepacka.cOrderEditor#cMessagesPanel);
+}
+cdocumenteditor#edt_order_order cpropertiespanel{
+	-moz-binding: url(binding:modules.featurepacka.cOrderEditor#cPropertiesPanel);
 }

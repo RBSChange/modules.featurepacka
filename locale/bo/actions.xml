@@ -7,4 +7,7 @@
 	<entity id="create-from-this">
 		<locale lang="fr">créer un autre prix à partir de celui-ci</locale>
 	</entity>
+	<entity id="view-printable-version">
+		<locale lang="fr">version imprimable</locale>
+	</entity>
 </localization>

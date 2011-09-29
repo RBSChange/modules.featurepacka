@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl" xmlns:xbl="http://www.mozilla.org/xbl" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<binding id="cMessagesPanel" extends="modules.order.cOrderEditor#cMessagesPanel">
+		<implementation>
+			<constructor><![CDATA[
+				var me = this;				
+				var toolbar = document.createElement('hbox');
+				toolbar.setAttribute('anonid', 'action-bar');				
+				var button = document.createElement('button');
+				button.setAttribute('anonid', 'print_button');
+				button.setAttribute('label', "&amp;modules.featurepacka.bo.actions.View-printable-version;");
+				button.setAttribute('image', "{IconsBase}/small/printer.png");
+				button.addEventListener('command', function () { me.printMessages(); }, true);
+				toolbar.appendChild(button);				
+				var scrollBox = document.getAnonymousElementByAttribute(this, 'anonid', 'scrollctrl');
+				scrollBox.parentNode.insertBefore(toolbar, scrollBox);
+			]]></constructor>
+			
+			<method name="printMessages">
+				<body><![CDATA[	
+					var url = wCore.buildServerUrl('order', 'PrintOrder', { mode: 'Messages', cmpref: this.documentEditor.documentid, lang: this.documentEditor.vo });												
+					wToolkit.openurl(url);
+				]]></body>
+			</method>
+		</implementation>
+	</binding>
+	
+	<binding id="cPropertiesPanel" extends="modules.order.editors.order#order_properties">
+		<implementation>
+			<constructor><![CDATA[
+				var me = this;				
+				var toolbar = document.getAnonymousElementByAttribute(this, 'anonid', 'action-bar');
+				var button = document.createElement('button');
+				button.setAttribute('anonid', 'print_button');
+				button.setAttribute('label', "&amp;modules.featurepacka.bo.actions.View-printable-version;");
+				button.setAttribute('image', "{IconsBase}/small/printer.png");
+				button.addEventListener('command', function () { me.printOrder(); }, true);
+				toolbar.appendChild(button);
+			]]></constructor>
+			
+			<method name="printOrder">
+				<body><![CDATA[	
+					var url = wCore.buildServerUrl('order', 'PrintOrder', { mode: 'Properties', cmpref: this.documentEditor.documentid, lang: this.documentEditor.vo });												
+					wToolkit.openurl(url);
+				]]></body>
+			</method>
+		</implementation>
+	</binding>
+</bindings>
