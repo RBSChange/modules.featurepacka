@@ -44,7 +44,7 @@ class order_PrintOrderPropertiesView extends f_view_BaseView
 	{
 		$ss = StyleService::getInstance();
 		$ss->registerStyle('modules.featurepacka.printOrder');
-		$ss->registerStyle('modules.featurepacka.printOrderPPrint', StyleService::MEDIA_PRINT);
+		$ss->registerStyle('modules.featurepacka.printOrderPrint', StyleService::MEDIA_PRINT);
 		$this->setAttribute('cssInclusion', $ss->execute(K::HTML));
 	}
 }
