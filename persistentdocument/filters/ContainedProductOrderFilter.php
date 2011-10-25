@@ -20,9 +20,23 @@ class featurepacka_ContainedProductOrderFilter extends f_persistentdocument_Docu
 	 */
 	public function getQuery()
 	{
+		$products = $this->getParameter('product')->getValueForQuery();
+		$productIds = array();
+		foreach ($products as $product)
+		{
+			if ($product instanceof catalog_persistentdocument_declinedproduct)
+			{
+				$productIds = array_merge($productIds, DocumentHelper::getIdArrayFromDocumentArray($product->getDeclinationArray()));
+			}
+			else
+			{
+				$productIds[] = $product->getId();
+			}
+		}
+		
 		$query = order_OrderService::getInstance()->createQuery();
 		$criteria1 = $query->createCriteria('line');
-		$criteria1->add(Restrictions::in('productId', DocumentHelper::getIdArrayFromDocumentArray($this->getParameter('product')->getValueForQuery())));
+		$criteria1->add(Restrictions::in('productId', $productIds));
 		return $query;
 	}
 }
