@@ -4,6 +4,5 @@
 		<enabled>true</enabled>
 		<visible>false</visible>
 		<icon>feature-pack</icon>
-		<usetopic>false</usetopic>
 	</module>
 </config>

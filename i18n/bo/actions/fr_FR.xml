@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.featurepacka.bo.actions" lcid="fr_FR">
+  <key id="createproductqueryfolder">créer un dossier intelligent de produits</key>
+  <key id="create-from-this">créer un autre prix à partir de celui-ci</key>
+  <key id="view-printable-version">version imprimable</key>
+</i18n>

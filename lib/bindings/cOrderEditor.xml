@@ -2,7 +2,7 @@
 <bindings xmlns="http://www.mozilla.org/xbl" xmlns:xbl="http://www.mozilla.org/xbl" xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-	<binding id="cMessagesPanel" extends="modules.order.cOrderEditor#cMessagesPanel">
+	<binding id="cMessagesPanel" extends="modules.order.editor.order.messages#order_messages">
 		<implementation>
 			<constructor><![CDATA[
 				var me = this;				

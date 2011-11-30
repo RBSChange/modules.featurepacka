@@ -10,6 +10,6 @@ class featurepacka_persistentdocument_waitingresponseorderfolder extends feature
 	 */
 	public function getLabel()
 	{
-		return f_Locale::translateUI("&modules.featurepacka.document.waitingresponseorderfolder.Document-name;");
+		return LocaleService::getInstance()->transBO('m.featurepacka.document.waitingresponseorderfolder.document-name', array('ucf'));
 	}
 }
