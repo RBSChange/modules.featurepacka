@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.featurepacka.document.productqueryfolder" lcid="en_GB">
+  <include id="m.filter.document.queryfolder"/>
+  <key id="document-name">product smart query folder</key>
+  <key id="query">query</key>
+  <key id="query-help">The query that enables retrieving the orders from this folder.</key>
+</i18n>

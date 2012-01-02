@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.featurepacka.bo.print" lcid="en_GB">
+  <key id="customer">client</key>
+  <key id="date">date</key>
+  <key id="details-for-order">order No. {orderNumber} details</key>
+  <key id="expeditions">shipments</key>
+  <key id="messages-for-order">messages related to order No. {orderNumber}</key>
+  <key id="messages-list">message list</key>
+  <key id="order-details">order details</key>
+  <key id="payments">payments</key>
+  <key id="status">status</key>
+</i18n>

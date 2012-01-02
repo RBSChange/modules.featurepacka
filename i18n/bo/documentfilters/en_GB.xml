@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.featurepacka.bo.documentfilters" lcid="en_GB">
+  <key id="containedproductorderfilter-label">presence of a product</key>
+  <key id="containedproductorderfilter-text">containing at least one of these products: {product}</key>
+  <key id="paymentstatuscustomerfilter-label">payment status for the orders</key>
+  <key id="paymentstatuscustomerfilter-text">clients who have at least {count} orders with {restriction} {status} invoice</key>
+  <key id="paymentstatusorderfilter-label">payment status</key>
+  <key id="paymentstatusorderfilter-text">container having {restriction} {status} invoice</key>
+</i18n>
